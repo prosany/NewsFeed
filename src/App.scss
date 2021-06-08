@@ -1,0 +1,70 @@
+@import './style/color.scss';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+
+body {
+  background-color: $secondary_color !important;
+}
+
+/* . dashboard */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 5;
+  background-color: $primary__color;
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 0 20px 20px 0;
+}
+
+div.content {
+  margin-left: 270px;
+  background-color: $secondary_color !important;
+}
+
+.home {
+  display: block !important;
+  text-align: center;
+  width: 100% !important;
+}
+.home a {
+  color: #051677 !important;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 10px 15px;
+  display: block;
+  background-color: #f0fffac9;
+}
+.home a:hover {
+  color: #051677 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
